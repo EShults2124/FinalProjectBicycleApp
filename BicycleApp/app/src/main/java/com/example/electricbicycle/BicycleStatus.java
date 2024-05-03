@@ -34,7 +34,7 @@ public class BicycleStatus extends AppCompatActivity {
         binding = ActivityBicycleStatusBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        bicycle = new Bicycle(75,35.0,138.4,"Higher","Normal",35.0);
+        bicycle = new Bicycle();
 
         binding.historicalTrips.setOnClickListener(new View.OnClickListener() {
             @Override

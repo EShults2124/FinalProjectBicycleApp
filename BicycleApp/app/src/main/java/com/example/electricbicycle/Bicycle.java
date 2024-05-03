@@ -4,7 +4,7 @@ import com.parse.ParseClassName;
 import com.parse.ParseObject;
 
 @ParseClassName("Bicycle")
-public class Bicycle {
+public class Bicycle extends ParseObject {
 
     public Bicycle() {
     }
