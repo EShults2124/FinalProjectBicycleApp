@@ -6,14 +6,7 @@ import com.parse.ParseObject;
 @ParseClassName("Bicycle")
 public class Bicycle {
 
-    public Bicycle(int batteryLevel, double range,double kmTraveled,String assistanceMode,
-                   String powerMode,double currentPower ) {
-        this.batteryLevel = batteryLevel;
-        this.range = range;
-        this.kmTraveled = kmTraveled;
-        this.assistanceMode = assistanceMode;
-        this.powerMode = powerMode;
-        this.currentPower = currentPower;
+    public Bicycle() {
     }
 
     public int getBatteryLevel() {
