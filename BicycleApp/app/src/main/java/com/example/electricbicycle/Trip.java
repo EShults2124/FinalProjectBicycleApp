@@ -1,74 +1,59 @@
 package com.example.electricbicycle;
 
-import java.util.Date;
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
 
-public class Trip {
-    private String origin;
-    private String destination;
 
-    private String powerMode;
-
-    private String assistance;
-
-    private String time;
-    private double kmTraveled;
+public class Trip extends ParseObject{
 
     public Trip() {
     }
 
-    public Trip(String origin, String destination, String powerMode, String assistance, String time, double kmTraveled) {
-        this.origin = origin;
-        this.destination = destination;
-        this.powerMode = powerMode;
-        this.assistance = assistance;
-        this.time = time;
-        this.kmTraveled = kmTraveled;
-    }
 
     public String getOrigin() {
-        return origin;
+        return getString("origin");
     }
     public void setOrigin(String origin) {
-        this.origin = origin;
+        put("origin",origin);
     }
 
     public String getDestination() {
-        return destination;
+        return getString("destination");
     }
     public void setDestination(String destination) {
-        this.destination = destination;
+        put("destination",destination);
     }
 
     public String getPowerMode() {
-        return powerMode;
+        return getString("powerMode");
     }
     public void setPowerMode(String powerMode) {
-        this.powerMode = powerMode;
+        put("powerMode",powerMode);
     }
 
     public String getAssistance() {
-        return assistance;
+        return getString("assistance");
     }
     public void setAssistance(String assistance) {
-        this.assistance = assistance;
+        put("assistance",assistance);
     }
 
     public String getTime() {
-        return time;
+        return getString("time");
     }
     public void setTime(String time) {
-        this.time = time;
+        put("time",time);
     }
 
     public double getKmTraveled() {
-        return kmTraveled;
+        return getDouble("kmTraveled");
     }
     public void setKmTraveled(double kmTraveled) {
-        this.kmTraveled = kmTraveled;
+        put("kmTraveled",kmTraveled);
     }
 
     @Override
     public String toString() {
-        return String.format("%.2f", kmTraveled) + " km - " + time + "\n" + "Origin: " + origin + "\n" +  "Destination: " + destination;
+        return String.format("%.2f", getKmTraveled()) + " km - " + getTime() + "\n" + "Origin: " + getOrigin() + "\n" +  "Destination: " + getDestination();
     }
 }
