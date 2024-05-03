@@ -1,12 +1,10 @@
 package com.example.electricbicycle;
 
+import com.parse.ParseClassName;
+import com.parse.ParseObject;
+
+@ParseClassName("Bicycle")
 public class Bicycle {
-    private int batteryLevel;
-    private double range;
-    private double kmTraveled;
-    private String assistanceMode;
-    private String powerMode;
-    private double currentPower;
 
     public Bicycle(int batteryLevel, double range,double kmTraveled,String assistanceMode,
                    String powerMode,double currentPower ) {
@@ -19,44 +17,44 @@ public class Bicycle {
     }
 
     public int getBatteryLevel() {
-        return batteryLevel;
+        return getInt("batteryLevel");
     }
     public void setBatteryLevel(int batteryLevel) {
-        this.batteryLevel = batteryLevel;
+        put("batteryLevel",batteryLevel);
     }
 
     public double getRange() {
-        return range;
+        return getDouble("range");
     }
     public void setRange(double range) {
-        this.range = range;
+        put("range",range);
     }
 
     public double getKmTraveled() {
-        return kmTraveled;
+        return getDouble("kmTraveled");
     }
     public void setKmTraveled(double kmTraveled) {
-        this.kmTraveled = kmTraveled;
+        put("kmTraveled",kmTraveled);
     }
 
     public String getAssistanceMode() {
-        return assistanceMode;
+        return getString("assistanceMode");
     }
     public void setAssistanceMode(String assistanceMode) {
-        this.assistanceMode = assistanceMode;
+        put("assistanceMode",assistanceMode);
     }
 
     public String getPowerMode() {
-        return powerMode;
+        return getString("powerMode");
     }
     public void setPowerMode(String powerMode) {
-        this.powerMode = powerMode;
+        put("powerMode",powerMode);
     }
 
     public double getCurrentPower() {
-        return currentPower;
+        return getDouble("currentPower");
     }
     public void setCurrentPower(double currentPower) {
-        this.currentPower = currentPower;
+        put("currentPower",currentPower);
     }
 }
