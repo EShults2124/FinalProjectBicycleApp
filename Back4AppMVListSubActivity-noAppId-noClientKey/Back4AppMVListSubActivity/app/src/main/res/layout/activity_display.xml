@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+    android:id="@+id/activity_display">
+
+
+    <!-- Fila 1: Longitud -->
+    <LinearLayout
+        android:id="@+id/row_longitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/longitud" />
+
+        <TextView
+            android:id="@+id/text_longitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <!-- Fila 2: Latitud -->
+    <LinearLayout
+        android:id="@+id/row_latitud"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/row_longitud"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latitud" />
+
+        <TextView
+            android:id="@+id/text_latitud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+    <!-- Fila 3: Kilómetros Totales -->
+    <LinearLayout
+        android:id="@+id/row_kmTotales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/row_latitud"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kmTotales" />
+
+        <TextView
+            android:id="@+id/text_kmTotales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp" />
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/edit_point_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="100dp"
+        android:layout_toStartOf="@+id/button_change_name"
+        android:ems="10"
+        android:hint="@string/edit_point_name">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button_change_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-4dp"
+        android:layout_marginBottom="100dp"
+        android:onClick="saveLocationName"
+        android:text="@string/button_change_name" />
+
+</RelativeLayout>
